@@ -73,7 +73,7 @@ const Cart = () => {
           </h1>
         </div>
 
-        <div className="space-y-4">
+        <ul className="space-y-4">
           {items.map((item) => (
             <CartItemCard
               key={item.product.id}
@@ -82,12 +82,12 @@ const Cart = () => {
               onRemove={() => removeItem(item.product.id)}
             />
           ))}
-        </div>
+        </ul>
 
         {/* Total Card */}
         <div className="mt-6 bg-card rounded-2xl p-6 shadow-card">
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground text-lg">Total do pedido</span>
+          <div role="group" aria-labelledby="order-total-label" className="flex items-center justify-between">
+            <span id="order-total-label" className="text-muted-foreground text-lg">Total do pedido</span>
             <span className="font-display font-bold text-3xl text-accent">
               {formatPrice(total)}
             </span>

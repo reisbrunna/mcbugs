@@ -12,7 +12,7 @@ interface CartItemProps {
 
 export function CartItemCard({ item, onUpdateQuantity, onRemove }: CartItemProps) {
   return (
-    <div className="flex gap-4 p-4 bg-card rounded-2xl shadow-soft">
+    <li className="flex gap-4 p-4 bg-card rounded-2xl shadow-soft">
       <div className="w-24 h-24 rounded-xl overflow-hidden bg-secondary flex-shrink-0">
         <img
           src={item.product.image}
@@ -47,6 +47,6 @@ export function CartItemCard({ item, onUpdateQuantity, onRemove }: CartItemProps
           size="sm"
         />
       </div>
-    </div>
+    </li>
   );
 }

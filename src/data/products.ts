@@ -1,4 +1,4 @@
-import { Product } from '@/types/menu';
+import type { Product } from '@/types/menu';
 
 export const products: Product[] = [
   // Lanches

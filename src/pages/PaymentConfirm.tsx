@@ -79,8 +79,8 @@ const PaymentConfirm = () => {
           <span className="font-display font-bold text-lg">#{currentOrder.id}</span>
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-border">
-          <span className="text-muted-foreground">Total do pedido</span>
+        <div role="group" aria-labelledby="order-total-label" className="flex items-center justify-between pt-4 border-t border-border">
+          <span id="order-total-label" className="text-muted-foreground">Total do pedido</span>
           <span className="font-display font-bold text-3xl text-accent">
             {formatPrice(currentOrder.total)}
           </span>
